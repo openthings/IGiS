@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  stages {
+    stage('Setup') {
+      steps {
+        sh './setup.sh'
+      }
+    }
+    stage('Build') {
+      steps {
+        sh './ipfs_build.sh'
+      }
+    }
+  }
+}

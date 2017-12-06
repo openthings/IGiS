@@ -2,7 +2,7 @@
 
 TEMP_DIR=$(mktemp -d)
 
-sbt fastOptJS::webpack
+java -jar .sbt-launcher.jar fastOptJS::webpack
 
 cp index.html ${TEMP_DIR}
 cp ./target/web/less/main/main.css ${TEMP_DIR}
